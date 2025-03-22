@@ -1,0 +1,27 @@
+Lesson 1+2:
+Lệnh tạo project: npm init playwright@latest
+
+Khởi tạo Repo trong Git: git init
+Chuyển nhánh master sang main: git branch -M main
+Remote project: git remote add origin {repotrên git}
+
+Add những code vừa change để chuẩn bị commit: git add .
+Commit code: git commit -m "..."
+Push commit lên remote repo: git push -u origin main
+
+Lesson 3: 
+Run test:
+- Chạy cả thư mục test: npx playwright test
+- Chạy với file cụ thể: npx playwright test {file path/file name}
+- Chạy 1 test case cụ thể: npx playwright test “{test case title}” -> check lại
+- Chạy với 1 trình duyệt cụ thể: npx playwright test -- project {firefox/chromium/webkit}
+- Chạy với nhiều trình duyệt: npx playwright test --project webkit --project firefox
+Show report: npx playwright show-report
+Debug test
+- Debug test trong ui mode: npx playwright test {file path/file name} --ui
+- Debug test với Playwright inspector: npx playwright test {file path/file name} --debug
+Gen code
+- Dùng lệnh: npx playwright codegen --output=tests/gencode1.spec.ts
+- Sau khi gen code xong click button Record để dừng, code sẽ được gen ở file tạo trong thư mục tests
+
+
