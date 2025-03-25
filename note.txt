@@ -7,6 +7,11 @@ Remote project: git remote add origin {repotrên git}
 
 Add những code vừa change để chuẩn bị commit: git add .
 Commit code: git commit -m "..."
+Xem lại lịch sử commit: git log
+Revert commit (không muốn commit lên): 
+Xem lại trạng thái: git status
+Quay lại trc khi thay đổi (ngược lại vs git add): git restore + copy path
+
 Push commit lên remote repo: git push -u origin main
 
 Lesson 3: 
