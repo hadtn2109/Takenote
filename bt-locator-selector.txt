@@ -1,0 +1,26 @@
+Truy cập trang: https://www.w3schools.com/
+1.  	Sử dụng tất cả các loại css selector để lấy ra các element sau:
+Lấy ra thẻ div có id = “main”
+    - Lấy theo tag name và ID: div#main
+    - Lấy theo thuộc tính:     [id=main]
+
+Lấy ra thẻ div có id = “tutorials_list”
+    - Lấy theo tag name và ID: div#tutorials_list
+    - Lấy theo thuộc tính:     [id=tutorials_list]
+
+Lấy ra thẻ div có class = “classic”
+    - Lấy theo tag name và class: div.classic
+    - Lấy theo class:             .classic
+
+Lấy ra tất cả các thẻ có class = “w3-content”
+    - Lấy theo class: .w3-content
+
+Lấy ra tất cả các thẻ có id = “exercises_list” và trước nó là thẻ
+   - Lấy theo id: [id=exercises_list]          
+
+Lấy ra thẻ có attribute preserveAspectRatio = “none”
+  - Lấy theo thuộc tính: [preserveAspectRatio=“none”] 
+
+2.  	Lấy ra thẻ chứa text “CSS Reference” sử dụng tất cả các loại selector trên (lấy được theo nhiều cách nhất có thể)
+      
+
