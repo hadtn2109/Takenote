@@ -1,0 +1,49 @@
+Truy cập trang: https://www.w3schools.com/
+1.  	Sử dụng tất cả các loại css selector để lấy ra các element sau:
+Lấy ra thẻ div có id = “main”
+    - Lấy theo tag name và ID: div#main
+    - Lấy theo thuộc tính:     [id=main]
+
+Lấy ra thẻ div có id = “tutorials_list”
+    - Lấy theo tag name và ID: div#tutorials_list
+    - Lấy theo thuộc tính:     [id=tutorials_list]
+
+Lấy ra thẻ div có class = “classic”
+    - Lấy theo tag name và class: div.classic
+    - Lấy theo class:             .classic
+
+Lấy ra tất cả các thẻ có class = “w3-content”
+    - Lấy theo class: .w3-content
+
+Lấy ra tất cả các thẻ có id = “exercises_list” và trước nó là thẻ
+   - Lấy theo id: [id=exercises_list]          
+
+Lấy ra thẻ có attribute preserveAspectRatio = “none”
+  - Lấy theo thuộc tính: [preserveAspectRatio=“none”] 
+
+2.  	Lấy ra thẻ chứa text “CSS Reference” sử dụng tất cả các loại selector trên (lấy được theo nhiều cách nhất có thể)
+  - Sử dụng XPath Selector > theo nội dung: page.locator('//a[text()="CSS Reference"])
+  - Sử dụng XPath Selector > theo một phần nội dung: page.locator('//a[contains(text(),"CSS Reference")])
+
+3. Tìm hiểu các cách lấy css selector theo attribute dưới đây và cho ví dụ
+[attribute~=value] -> Lấy các phần tử có attribute chứa value là một từ riêng biệt
+  VD: [class~="w3-white"] 
+  -> KQ: <div id="pagetop" class="w3-bar notranslate w3-white">
+
+[attribute|=value] -> Chọn phần tử có thuộc tính bắt đầu chính xác bằng value hoặc value-
+  VD: [lang|="en"] 
+  -> KQ: <html lang="en-US">
+
+[attribute^=value] -> Chọn phần tử có thuộc tính bắt đầu chính xác bằng value (không cần dấu -)
+  VD: [href^="https"] 
+  -> KQ: <a id="w3-logo" href="https://www.w3schools.com" class="w3-bar-item w3-button w3-hover-none w3-left ga-top ga-top-w3home" title="Home" style="width: 75px" aria-label="Home link">…</a>
+
+[attribute$=value] -> Chọn phần tử có thuộc tính kết thúc chính xác bằng value.
+  VD: [src$=".png"] 
+  -> KQ: <img id="img_mylearning" src="/images/mylearning24.png" style="width:100%;max-width:500px;margin-top:15px;margin-bottom:5px;" loading="lazy" alt="My Learning">
+
+[attribute*=value] -> Chọn phần tử có thuộc tính chứa value ở bất kỳ vị trí nào (đầu, giữa hoặc cuối)
+  VD: [class*="menu"] 
+  -> KQ: <div class="tnb-mobile-nav-section-toggle-btn w3-button ga-top ga-top-menu-exc-and-quz" onclick="TopNavBar.toggleMobileNav(event, 'exercises')" aria-label="Exercises" role="button">…</div>
+
+
