@@ -1,0 +1,70 @@
+Bài tập
+Bài 1. Sử dụng xpath với nhiều cách khác nhau để lấy ra các element sau (Lấy theo nhiều cách nhất có thể):
+* Thẻ a có text là “Try it Yourself” ở block CSS Example
+    --> Cách 1: //a[@href="/css/tryit.asp?filename=trycss_default" and text()="Try it Yourself"]
+    --> Cách 2: chưa nghĩ ra
+
+* Lấy ra thẻ div có class = “w3-content”
+    --> Cách 1: //div[@class="w3-content"]
+    --> Cách 2: chưa nghĩ ra
+
+* Lấy ra thẻ có text contains “CSS Example” và tổ tiên là thẻ div có class = “w3-content”
+    --> Cách 1: //div[@class="w3-content"]/descendant::*[contains(text(), "CSS Example")]
+    --> Cách 2: chưa nghĩ ra
+
+Bài 2. Sử dụng tất cả các loại xpath axes để lấy ra các element sau:
+* Thẻ a có text là “Try it Yourself” ở block CSS Example
+    --> Cách 1: //h3[text()="CSS Example:"]/following-sibling::a[text()="Try it Yourself"]
+    --> Cách 2: //div[@class="w3-code cssHigh notranslate green-border"]/following::a[text()="Try it Yourself"][1]
+    --> Cách 3: chưa nghĩ ra
+
+* Lấy ra thẻ div có class = “w3-content” và có thẻ con cháu là thẻ có text contains “CSS Example”
+    --> Cách 1: //*[contains(text(), "CSS Example")]/ancestor::div[@class="w3-content"]
+    --> Cách 2: chưa nghĩ ra
+
+* Lấy ra thẻ div có thẻ con có text contains “CSS Example”
+    --> Cách 1: //*[contains(text(), "CSS Example")]/parent::div
+    --> Cách 2: chưa nghĩ ra
+
+* Lấy ra tất cả các thẻ là anh chị em của thẻ có text contains “CSS Example”
+    --> Cách 1: //*[contains(text(), "CSS Example")]/following-sibling::* --> Lấy ra tất cả các thẻ là anh chị em sau nó
+                //*[contains(text(), "CSS Example")]/preceding-sibling::* --> Lấy ra tất cả các thẻ là anh chị em trước nó
+    --> Cách 2: chưa nghĩ ra
+
+* Lấy ra thẻ div cùng cấp theo sau thẻ có text contains “CSS Example”
+    --> Cách 1: //*[contains(text(), "CSS Example")]/following-sibling::div
+    --> Cách 2: chưa nghĩ ra
+
+* Lấy ra thẻ có text là “Get Certified” theo thẻ có text contains “CSS Example”
+    --> Cách 1: //*[contains(text(), "CSS Example")]/following::*[text()="Get Certified"]
+    --> Cách 2: chưa nghĩ ra
+
+Bài 3. Lấy ra thẻ chứa text “CSS Reference” sử dụng tất cả các loại selector trên (lấy được theo nhiều cách nhất có thể)
+    --> Cách 1: //*[contains(text(), "CSS Reference")]
+    --> Cách 2: //div[@class="w3-content"]/descendant::a[contains(text(), "CSS Reference")]
+    --> Cách 3: chưa nghĩ ra   
+
+Bài 4. Giải thích các xpath dưới đây:
+ //*[normalize-space()="Search"]//button[2]
+ --> Lấy ra thẻ button thứ 2 nằm trong các thẻ có text "Search" sau khi bỏ khoảng trắng đầu cuối
+
+ //span[@uib-tooltip='Close']
+ --> Lấy ra thẻ span có thuộc tính uib-tooltip là "Close"
+
+ //*[normalize-space()='Policy - ${name}']
+ --> Lấy ra tất cả các thẻ có text là Policy - ${name} sau khi bỏ khoảng trắng đầu cuối
+
+ //*[@uib-tooltip='View actions']//span
+ --> Lấy ra thẻ span nằm trong tất cả các thẻ có thuộc tính uib-tooltip là View actions
+
+ //input[@placeholder="Choose email..."]
+ --> Lấy ra thẻ input có thuộc tính placeholder là Choose email...
+
+ (//*[descendant::p[normalize-space()="HOST"]]//*[contains(text(), "${hostName }")])[1]
+ --> Lấy ra thẻ đầu tiên chứa text "${hostName }" nằm trong các thẻ có con cháu là thẻ p có text "HOST" sau khi bỏ khoảng trắng đầu cuối
+
+ //*[@role="option"]//descendant::*[contains(text(),'${optionValue}')]
+ --> Lấy ra tất cả các thẻ chứa text "${optionValue}" có tổ tiên nằm trong thẻ có thuộc tính role là "option"
+
+ //div[child::label//span[text()="${label}"]]//preceding-sibling::label//input[@type="checkbox"]
+ --> Đang suy nghĩ...
