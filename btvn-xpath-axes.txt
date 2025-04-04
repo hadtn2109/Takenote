@@ -67,4 +67,4 @@ Bài 4. Giải thích các xpath dưới đây:
  --> Lấy ra tất cả các thẻ chứa text "${optionValue}" có tổ tiên nằm trong thẻ có thuộc tính role là "option"
 
  //div[child::label//span[text()="${label}"]]//preceding-sibling::label//input[@type="checkbox"]
- --> Đang suy nghĩ...
+ --> Lấy ra thẻ input có thuộc tính type là checkbox và nằm trong thẻ label, là anh chị em trước thẻ div mà chứa thẻ con label có thẻ span nằm trong với text là ${label}
